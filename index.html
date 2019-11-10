@@ -698,9 +698,23 @@ Click the help icon above to learn more.
         .lillyC {
             background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/MilkenFilePhoto-2000x1340.jpg');
         }
-
         .namaste {
             background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/SY_georgetown-safeway-1500x1000.jpg');
+        }
+        .watermelonHouse {
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/SY_georgetown-safeway-1500x1000.jpg');
+        }
+        .Presidential {
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/SY_georgetown-safeway-1500x1000.jpg');
+        }
+        .Love {
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/MilkenFilePhoto-2000x1340.jpg');
+        }
+        .Homneless {
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/MilkenFilePhoto-2000x1340.jpg');
+        }
+        .Immigration {
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/MilkenFilePhoto-2000x1340.jpg');
         }
 
         .marker-pin:hover {
@@ -728,34 +742,91 @@ Click the help icon above to learn more.
                     attribution: '&copy; Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL.'
                 }).addTo(map);
 
+                // First marker 
                 icon = L.divIcon({
                     className: 'custom-div-icon',
                     html: "<div style='' class='marker-pin lillyC'></div>",
                     iconSize: [70, 70],
                     iconAnchor: [15, 42]
                 });
-
                 mural1_lillyC =  L.marker([38.930996, -77.029728], { icon: icon}).addTo(map)
                 .on('click', onMapClick);
-
-
+                
+                // Second maker
                 icon2 = L.divIcon({
                     className: 'custom-div-icon',
                     html: "<div style='' class='marker-pin namaste'></div>",
                     iconSize: [70, 70],
                     iconAnchor: [15, 42]
                 });
-
-
                 mural2_namaste =  L.marker([38.906737, -77.024288], { icon: icon2 }).addTo(map)
                 .on('click', onMapClick);
-
                 
-                
+                // Third marker
+                icon3 = L.divIcon({
+                    className: 'custom-div-icon',
+                    html: "<div style='' class='marker-pin watermelonHouse'></div>",
+                    iconSize: [70, 70],
+                    iconAnchor: [15, 42]
+                });
+                mural3_watermelonHouse = L.marker ([38.911046, -77.027515], {icon: icon3}).addTo(map)
+                .on('click', onMapClick);
 
-                var group = new L.featureGroup([mural1_lillyC, mural2_namaste]);
+                // Forth marker
+                icon4 = L.divIcon({
+                    className: 'custom-div-icon',
+                    html: "<div style='' class='marker-pin Presidential'></div>",
+                    iconSize: [70, 70],
+                    iconAnchor: [15, 42]
+                });
+                mural4_Presidential = L.marker ([38.923547, -77.046777], {icon: icon4}).addTo(map)
+                .on('click', onMapClick);
 
-                map.fitBounds(group.getBounds());
+                // Fifth marker 
+                icon5 = L.divIcon({
+                    className: 'custom-div-icon',
+                    html: "<div style='' class='marker-pin Love'></div>",
+                    iconSize: [70, 70],
+                    iconAnchor: [15, 42]
+                });
+                mural5_Love = L.marker ([38.906499, -77.024983], {icon: icon5}).addTo(map)
+                .on('click', onMapClick);
+
+                // Sixth marker
+                icon6 = L.divIcon({
+                    className: 'custom-div-icon',
+                    html: "<div style='' class='marker-pin Homeless'></div>",
+                    iconSize: [70, 70],
+                    iconAnchor: [15, 42]
+                });
+                mural6_Homeless = L.marker ([38.894845, -77.013641], {icon: icon6}).addTo(map)
+                .on('click', onMapClick);
+
+                // Seventh marker
+                icon7 = L.divIcon({
+                    className: 'custom-div-icon',
+                    html: "<div style='' class='marker-pin Immigration'></div>",
+                    iconSize: [70, 70],
+                    iconAnchor: [15, 42]
+                });
+                mural7_Immigration = L.marker ([38.928211, -77.032957], {icon: icon7}).addTo(map)
+                .on('click', onMapClick);
+
+                // Eighth marker 
+                // Ninth marker 
+
+                var group = new L.featureGroup([
+                    mural1_lillyC, 
+                    mural2_namaste, 
+                    mural3_watermelonHouse, 
+                    mural4_Presidential,
+                    mural5_Love,
+                    mural6_Homeless,
+                    mural7_Immigration
+                ]);
+
+                map.fitBounds(group.getBounds(), { "padding": [5, 5] });
+
             }
 
             function dismissModal(id) {
