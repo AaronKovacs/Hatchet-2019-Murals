@@ -322,7 +322,7 @@ Click the help icon above to learn more.
         .mapBox {
             background-color: white;
             width: 100%;
-            height: 650px;
+            height: 620px;
         }
 
         .close-button-div {
@@ -708,18 +708,23 @@ Click the help icon above to learn more.
             background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/SY_georgetown-safeway-1500x1000.jpg');
         }
         .Presidential {
-            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/SY_georgetown-safeway-1500x1000.jpg');
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/ThePresidentialMural_MS-1500x1000.jpg');
         }
         .Love {
             background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/MilkenFilePhoto-2000x1340.jpg');
         }
-        .Homneless {
-            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/MilkenFilePhoto-2000x1340.jpg');
+        .Homeless {
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/HomelessLivesMatter_JF-2000x1340.jpg');
         }
         .Immigration {
-            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/MilkenFilePhoto-2000x1340.jpg');
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/YouAreWelcome_SM2000x1340.jpg');
         }
-
+        .centrolNai {
+            background-image: url('');
+        }
+        .Language {
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/LanguageAccessForAll_JF-2000x1340.jpg');
+        }
         .marker-pin:hover {
             width: 90px;
             height: 90px;
@@ -760,7 +765,7 @@ Click the help icon above to learn more.
                     iconAnchor: [15, 42]
                 });
                 mural1_lillyC =  L.marker([38.930996, -77.029728], { icon: icon}).addTo(map)
-                .on('click', onMapClick);
+                .on('click', function() { onMapClick('id01');});
                 
                 // Second maker
                 icon2 = L.divIcon({
@@ -769,7 +774,7 @@ Click the help icon above to learn more.
                     iconSize: [70, 70],
                     iconAnchor: [15, 42]
                 });
-                mural2_namaste =  L.marker([38.906737, -77.024288], { icon: icon2 }).addTo(map)
+                mural2_namaste =  L.marker([38.907304, -77.007550], { icon: icon2 }).addTo(map)
                 .on('click', onMapClick);
                 
                 // Third marker
@@ -799,7 +804,7 @@ Click the help icon above to learn more.
                     iconSize: [70, 70],
                     iconAnchor: [15, 42]
                 });
-                mural5_Love = L.marker ([38.906499, -77.024983], {icon: icon5}).addTo(map)
+                mural5_Love = L.marker ([38.904637, -77.036462], {icon: icon5}).addTo(map)
                 .on('click', onMapClick);
 
                 // Sixth marker
@@ -819,11 +824,28 @@ Click the help icon above to learn more.
                     iconSize: [70, 70],
                     iconAnchor: [15, 42]
                 });
-                mural7_Immigration = L.marker ([38.928211, -77.032957], {icon: icon7}).addTo(map)
+                mural7_Immigration = L.marker ([38.924625, -77.015234], {icon: icon7}).addTo(map)
                 .on('click', onMapClick);
 
                 // Eighth marker 
+                icon8 = L.divIcon({
+                    className: 'custom-div-icon',
+                    html: "<div style='' class='marker-pin centrolNai'></div>",
+                    iconSize: [70, 70],
+                    iconAnchor: [15, 42]
+                });
+                mural8_centrolNai = L.marker ([38.920228, -77.032583], {icon: icon8}).addTo(map)
+                .on('click', onMapClick);
+
                 // Ninth marker 
+                icon9 = L.divIcon({
+                    className: 'custom-div-icon',
+                    html: "<div style='' class='marker-pin Language'></div>",
+                    iconSize: [70, 70],
+                    iconAnchor: [15, 42]
+                });
+                mural9_Language = L.marker ([38.942354, -77.028819], {icon: icon9}).addTo(map)
+                .on('click', onMapClick);
 
                 var group = new L.featureGroup([
                     mural1_lillyC, 
@@ -832,10 +854,12 @@ Click the help icon above to learn more.
                     mural4_Presidential,
                     mural5_Love,
                     mural6_Homeless,
-                    mural7_Immigration
+                    mural7_Immigration,
+                    mural8_centrolNai,
+                    mural9_Language,
                 ]);
 
-                map.fitBounds(group.getBounds(), { "padding": [5, 5] });
+                map.fitBounds(group.getBounds(), { "padding": [1, 1] });
 
             }
 
@@ -847,8 +871,8 @@ Click the help icon above to learn more.
                 document.getElementById('body-element').style.overflow = 'auto';
             }
             
-            function onMapClick(e) {
-                document.getElementById('id01').style.display = 'block'
+            function onMapClick(id) {
+                document.getElementById(id).style.display = 'block'
         
                 document.getElementById('body-element').style.overflow = 'hidden';
 
