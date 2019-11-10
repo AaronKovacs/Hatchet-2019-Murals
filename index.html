@@ -155,6 +155,8 @@
     <link rel="icon" href="https://www.gwhatchet.com/wp-content/uploads/2016/07/cropped-icon-01-192x192.png" sizes="192x192" />
     <link rel="apple-touch-icon-precomposed" href="https://www.gwhatchet.com/wp-content/uploads/2016/07/cropped-icon-01-180x180.png" />
     <meta name="msapplication-TileImage" content="https://www.gwhatchet.com/wp-content/uploads/2016/07/cropped-icon-01-270x270.png" />
+
+
     <style type="text/css" id="wp-custom-css">
         /*
 You can add your own CSS here.
@@ -315,6 +317,7 @@ Click the help icon above to learn more.
     href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"
     crossorigin=""></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <style type="text/css">
         /* MARK: Custom CSS */
@@ -380,6 +383,7 @@ Click the help icon above to learn more.
 
      .w3-modal-content a {
         text-decoration: none;
+        color: #61cbe0;
      }
 
      .w3-modal-content {
@@ -453,94 +457,434 @@ Click the help icon above to learn more.
         width:100%
     }
 
+    .map-header {
+        font-weight: 700; 
+        font-size: 24pt; 
+        width: 100%; 
+        background-color: #003b5c; 
+        padding-top: 16px; 
+        padding-bottom: 16px; 
+        padding-left: 32px; 
+        padding-right: 32px; 
+        color: white; 
+        margin-bottom: 0;
+        text-align: center;
+    }
 
-    @keyframes scale-display {
-        0% {
-            opacity: 0;
-            transform: scale(0);
-            -webkit-transform: scale(0);
+    .map-header h3 {
+        font-weight: 700; 
+        font-size: 24pt; 
+        width: 100%; 
+        color: white; 
+        margin-bottom: 0;
+        text-align: center;
+        margin: 0 0 0 0;
+    }
+
+    .map-header p {
+        font-weight: 500; 
+        font-size: 16pt; 
+        margin: 0 0 0 0;
+    }
+
+    .inline-figure {
+        float: right; 
+        width: 450px; 
+        margin-left: 2rem;
+    }
+
+    figure.post-thumbnail {
+        margin-left: 2rem;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .map-header h3 {
+            font-size: 18pt; 
         }
 
-        100% {
-            opacity: 1;
-            transform: scale(1);
-            -webkit-transform: scale(1);
+        .inline-figure {
+            width: auto;
+            margin-left: none;
+            float: none;
+        }
+
+        figure.post-thumbnail {
+            margin-left: 0rem;
         }
     }
 
-    @keyframes scale-display--reversed {
-        0% {
-            opacity: 1;
-            transform: scale(1);
-            -webkit-transform: scale(1);
-        }
-        99% {
-            opacity: 0;
-            transform: scale(0);
-            -webkit-transform: scale(0);
-        }
-        100% {
-            opacity: 0;
-            transform: scale(0);
-            -webkit-transform: scale(0);
-        }
-    }
-
-
-    .button--disapear {
-        display: none;
-    }
-
-    .button--disapear:active {
-        animation: scale-display .3s;
-    }
-
-    .button--disapear:out {
-        animation: scale-display--reversed .3s;
-        animation-fill-mode:forwards;
-    }
-
-    </style>>
+    </style>
 </head>
 
-<div id="id01" class="w3-modal">
+<div id="id01" class="w3-modal foo">
     <div class="w3-modal-content">
-        <span class="close-button-div" onclick="dismissModal('id01')">
-            Close Gallery
-        </span>
+        <span class="close-button-div" onclick="dismissModal('id01')">Close Gallery</span>
 
         <div class="w3-container">
             <article class="post post-with-thumb">
-                <h1 class="post-title post-title-single">Thousands use GW Libraries&#8217; social media archive tool six years after debut</h1>
+                <h1 class="post-title post-title-single">Calla Lily</h1>
                 <div class="post-body">
-                    <figure class="post-thumbnail"><img width="1000" height="670" src="https://www.gwhatchet.com/wp-content/uploads/2019/11/FileAB_Geneva-Henry-1000x670.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
-                        <figcaption>
-                            <p class="media-credit">Media Credit: Hatchet File Photo </p>
-                            <p class="media-description">Geneva Henry, the dean of libraries and academic innovation, said more than 3,000 users have employed different search strategies to pore over more than 15 million tweets. </p>
-                        </figcaption>
-                    </figure>
-                    <div class="byline">
-                        <div class="category-badge">
-                            <a href="https://www.gwhatchet.com/section/news/" style="background-color: #0070cc">News</a>
-                        </div>
-                        <span class="byline-author">By <a href="https://www.gwhatchet.com/author/zeniya-cooley/" rel="author">Zeniya Cooley</a></span>
-                        <span class="byline-time">Nov 7, 2019 12:43 AM</span>
-                    </div>
+                    <iframe width="100%" height="415" src="https://www.youtube.com/embed/JAxoQEmjLXc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <figcaption>
+                            <p class="media-description">Kaliq Crosby talks about the inspiration and work behind "Calla Lily" at 1300 Park Road NW.</p>
+                     </figcaption>
+                    
                     <div class="post-content">
-                        <p>More than 3,000 users have taken advantage of a tool GW Libraries officials created to help researchers archive and analyze social media posts over the past six years.</p>
-                        <figure class="post-thumbnail"><img width="1000" height="670" src="https://www.gwhatchet.com/wp-content/uploads/2019/11/MilkenFilePhoto-2000x1340.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
-
-                        <p>Developed in 2013 by a group of software developers, archivists and librarians, the Social Feed Manager collects data from Twitter, Tumblr, Flickr and Sina Weibo – a Chinese blogging website – and exports and organizes the data for researcher use. The tool has helped researchers obtain hundreds of thousands of social media posts they can use to study, according to the Social Feed Manager website.</p>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/djV11Xbc914" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                         <p>The men are aiming to continue their upward trajectory, and the women are embracing a new year with new players and without injury  .</p>
+                        <p>When Kaliq Crosby stumbled upon a mural painted at 3400 13th St. NW, he said it was “falling apart.”</p>
+                        <p>Crosby said he wanted to give the wall a do-over, painting it in yellow and inviting children from around the city to help complete the mural now known as “Calla Lily” on the side of Addis Park Market. The 17-by-11-foot mural depicts a calla lily – the country flower of Ethiopia – using the red, yellow and green colors of the Ethiopian flag to honor the grocery store owners who are Ethiopian.</p>
+                        <p>“It represents peace,” Crosby said. “We wanted to bring it into the community to connect them to the community more, just to give a really beautiful, vibrant look to it and something that represented unity and peace during these times where we&#8217;re having a lot of trouble with that.”</p>
+                        <p>Crosby said the process took about three weeks to complete, finishing the project in late August with the help of local youth who learned about the process of creating a mural from the sketching to painting stages. He said he wants the mural to engage onlookers who can stop and admire the piece on their way to and from work.</p>
+                        <p>“I just want them to leave with a sense of happiness and joy,” he said. “That&#8217;s really what I wanted to do was kind of brighten up the scene, brighten up this intersection and just give people something beautiful to look at that they can start conversations with one another.”</p>
+                        <p>The mural was commissioned by the MuralsDC program, a project funded by the D.C. Department of Public Works designed to prevent graffiti, in cooperation with the D.C. Commission on the Arts and Humanities, according to the program&#8217;s website.</p>
+                        <figure class="post-thumbnail inline-figure">
+                            <img width="350" height="670" src="https://www.gwhatchet.com/wp-content/uploads/2019/11/Calla-Lily-Thumbnail.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
+                            <p class="media-credit" style="margin-bottom: 0;">Media Credit: Sabrina Godin</p>
+                        </figure>
+                        <p>Crosby said he did not know the shop owners before the project. The pairing came together once the shop owners applied to have a mural painted on their store through the D.C. Commission on the Arts and Humanities. Crosby was matched to the location after he applied to the MuralsDC program with a packet of his previous work and references.</p>
+                        <p>Crosby said he always wanted to be a muralist. He said he started off doing smaller projects in people’s homes, like children’s rooms or “man caves,” and boutiques and salons before applying for larger murals.</p>
+                        <p>He said he has also painted portraits, children&#8217;s books and clothing using airbrush painting techniques. Crosby has painted “a little bit of everything,” from cars and motorcycles to portraits.</p>
+                        <p>&#8220;I paint cars, I paint motorcycles, almost any surface,&#8221; he said. &#8220;I try to do a little bit of everything.&#8221;</p>
                     </div>
+                    <figcaption>
+                            <p class="media-description">Story by Rachel Armany.</p>
+                     </figcaption>
                 </div>
             </article>
         </div>
     </div>
 </div>
 
-<body onresize="setMap()" id="body-element" class="post-template-default single single-post postid-1103487 single-format-standard logged-in admin-bar no-customize-support">
+<div id="id02" class="w3-modal foo">
+    <div class="w3-modal-content">
+        <span class="close-button-div" onclick="dismissModal('id02')">Close Gallery</span>
+
+        <div class="w3-container">
+            <article class="post post-with-thumb">
+                <h1 class="post-title post-title-single">Namaste</h1>
+                <div class="post-body">
+                    <iframe width="100%" height="415" src="https://www.youtube.com/embed/kIoN4Wu0nm4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <figcaption>
+                            <p class="media-description">Aniekan Udofia talks about the inspiration and work behind "Namaste" at 1234 9th Street NW.</p>
+                     </figcaption>
+                    
+                    <div class="post-content">
+
+                        <p>Right around the corner from the infamous Blagden Alley, an image of a woman in a meditating yoga position seems to float in the air.</p>
+                        <p>The “Namaste” mural is plastered on the second-story wall of the dog daycare and grooming salon Wagtime at 1232 Ninth St. NW, just across from the Convention Center. Artist Aniekan Udofia said he wants to remind onlookers of humanity and nature through the act of meditation drawn in the mural.</p>
+                        <p>&#8220;I love nature, I love blue skies and mountains,&#8221; Udofia said. &#8220;So I try to incorporate that, whether through in an abstract way, or literally as it is here.&#8221;</p>
+                        <p>Udofia also said he drew inspiration for the mural out of his love of illustrations. He said the woman who is levitating in the middle of the wall is reminiscent of the fictional comic book &#8220;Dr. Strange.&#8221;</p>
+                        <p>“I love fantasy art, I love comic books, comic art,” Udofia said. “I tapped into that, my love for comics and fantasy art. I love creating imaginative realities.”</p>
+                        <p>The mural features vibrant colors of purple and blue, and the woman in the painting is sitting in a cross-legged meditating position. Bare trees intertwine around her head, and birds and a deer stand in the foreground and background.</p>
+                        <p>Udofia said he took about three weeks to piece together his design, and the mural took about a week to paint in August. He said he used a manlift to paint from the roof of the wall to the bottom.</p>
+                        <figure class="post-thumbnail inline-figure">
+                            <img width="350" height="670" src="https://www.gwhatchet.com/wp-content/uploads/2019/11/Namaste_AB-1000x667.jpg" />
+                            <p class="media-credit" style="margin-bottom: 0;">Media Credit: Sydney Walsh</p>
+                        </figure>
+                        <p>The mural was commissioned by <a href="http://muralsdcproject.com/">MuralsDC</a> in partnership with the pet spa Wagtime. Both Udofia and the Wagtime owners chose the location based off the large amount of traffic on Ninth Street, where many people walk in and out of the nearby Convention Center.</p>
+                        <p>“I hope D.C. residents own it and feel like it’s a part of the city, because that’s what these are created for,” Udofia said. “Hopefully people can absorb it and own it as they’re supposed to. And it’s a beautiful concept that resonates with everyone altogether.”</p>
+                        <p>&#8220;Namaste&#8221; is not Udofia’s first, or last, mural in the District. He is known for painting the Ben’s Chili Bowl mural, which features portraits of icons like the Obama family and Prince. On 15th and U streets, he has painted two murals across from each other named “George Washington, the Gag,” and “Dunmoor building.”</p>
+                        <p>Udofia said he grew up with a passion for hand-drawn paintings on packaging, and he previously worked as an illustrator drawing albums and book covers. He said several of his murals often look like the cover of a book.</p>
+                        <p>“You could literally put the title over the top and it would fit,” he said. “It’s almost like you’re about to open a book and read the first chapter.”</p>
+
+                    </div>
+                    <figcaption>
+                            <p class="media-description">Story by Jayde Lyon.</p>
+                     </figcaption>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+<div id="id03" class="w3-modal foo">
+    <div class="w3-modal-content">
+        <span class="close-button-div" onclick="dismissModal('id03')">Close Gallery</span>
+
+        <div class="w3-container">
+            <article class="post post-with-thumb">
+                <h1 class="post-title post-title-single">Watermelon House</h1>
+                <div class="post-body">
+                    <iframe width="100%" height="415" src="https://www.youtube.com/embed/ZWgX1vt0vsE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <figcaption>
+                            <p class="media-description">Wade K. Wilson talks about the inspiration and work behind "Watermelon House" at 1112 Q Street NW.</p>
+                     </figcaption>
+                    
+                    <div class="post-content">
+
+                        <p>Artist Wade Wilson wanted to paint a mural, so he went to work on the side of his own home at 1112 Q St. NW.</p>
+                        <p>Wilson’s end piece is the “Watermelon House,” which he describes as “a search for love in a watermelon rind.” He said he originally bought the house in a mint green color plastered with graffiti and wanted to cover it up with new paint, amusing the Sherwin Williams employees who eventually recommended he use a high-gloss red that could easily wipe off graffiti.</p>
+                        <p>“We decided on a fire engine red, and the guys were kind of making fun of it a little bit, because they thought it was another tagging,&#8221; Wilson said. “I was like, &#8216;No this time we&#8217;re painting it.'&#8221;</p>
+                        <p>The high gloss of the red paint lightened the bright red and turned the color into a “Pepto Bismol pink,” Wilson said. The red-pink color reminded Wilson and his partner of a watermelon that their nephew had painted on a half wall of their former home in New Mexico, inspiring them to begin the watermelon mural project on their new home.</p>
+                        <p>“We are really big on synchronicity and all of that stuff, and I was like, &#8216;Well we have those greens that didn&#8217;t match,&#8217; so I went and I painted as high as I could reach, because I was afraid of heights at that time,” Wilson said. “So as high as I could reach I painted the watermelon that you see in the old pictures, and you could tell I wasn&#8217;t an artist at all.”</p>
+                        <figure class="post-thumbnail inline-figure">
+                            <img width="350" height="670" src="https://www.gwhatchet.com/wp-content/uploads/2019/11/Watermelon_SW-1000x667.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
+                            <p class="media-credit" style="margin-bottom: 0;">Media Credit: Sydney Walsh</p>
+                        </figure>
+                        <p>Wilson began the transformation in July 2006, he said. He painted the original watermelon mural as far up as he could reach and solicited professional painters to help finish the job by painting to the top of the house, he said.</p>
+                        <p>He said the painters he hired were initially reluctant to work because they were suspicious that his watermelon project alluded to a stereotype about the black community, but Wilson said he assured them that the painting is &#8220;purely for fun.&#8221;</p>
+                        <p>“I assure you, it&#8217;s not a commentary of any type like that whatsoever,” he said.</p>
+                        <p>Wilson, who is now almost a full-time artist, said he couldn’t even draw when he started the transformation on his home in 2006, but over the past few years, he taught himself painting and masonry. In May 2017, he said he began renovations of the watermelon mural, fixing leaks in the wall and updating the paint. He also added lines and shapes within the rind like hearts and question marks, he said.</p>
+                        <p>Wilson said he has still faced some minor issues with people painting graffiti on his home and climbing onto his back porch for photos. But he said he is grateful for the positive impact the watermelon mural has had on his life because he has drawn in people who can connect with one another through the piece of art.</p>
+                        <p>“One of my favorite things is to be back here working, when nobody knows I&#8217;m here, and to listen to the laughter,” Wilson said. “I can hear it a lot of times, the exclamations, when they come around the corner and there&#8217;s this silly watermelon on the side of the house.”</p>
+
+                    </div>
+                    <figcaption>
+                            <p class="media-description">Story by Jayde Lyon.</p>
+                     </figcaption>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+<div id="id04" class="w3-modal foo">
+    <div class="w3-modal-content">
+        <span class="close-button-div" onclick="dismissModal('id04')">Close Gallery</span>
+
+        <div class="w3-container">
+            <article class="post post-with-thumb">
+                <h1 class="post-title post-title-single">The Presidential</h1>
+                <div class="post-body">
+                    <iframe width="100%" height="415" src="https://www.youtube.com/embed/SjyicmuQDnY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <figcaption>
+                            <p class="media-description">Karlísima talks about the inspiration and work behind "The Mama Ayesha's Restaurant Presidential Mural" at 1967 Calvert Street NW.</p>
+                     </figcaption>
+                    
+                    <div class="post-content">
+
+                        <p>For three years, artist Karla Rodas-Israel worked to paint former presidents from Dwight D. Eisenhower to Barack Obama on the side of an Adams Morgan Middle Eastern restaurant.</p>
+                        <p>&#8220;The Mama Ayesha’s Restaurant Presidential Mural,&#8221; located at 1967 Calvert St. NW, depicts former White House reporter Helen Thomas, a longtime patron of the restaurant, linking arms with 11 former U.S. presidents, 10 of whom she covered during her tenure. Rodas-Israel said Thomas frequented the restaurant because she and the store owners shared Palestinian descent, and the owners valued her work as a journalist.</p>
+                        <p>“She had her own booth, she used to dine here very often and was a very beloved customer and everybody loved her,&#8221; Rodas-Israel said. &#8220;So that&#8217;s why they wanted to put her on the mural.&#8221;</p>
+                        <p>The background of the mural blends together D.C. landmarks among the changing seasons. Rodas-Israel said the changing seasons behind Thomas and the former presidents represent changing times throughout American history.</p>
+                        <p>The cherry blossoms behind Obama represent &#8220;new birth&#8221; and the spring, while the leafless winter trees behind former President John F. Kennedy are “almost foreboding” because he was killed during his tenure, she said.</p>
+                        <p>Rodas-Israel, who goes by the artist name of “Karlisima,” said she began work on the mural in April 2008 and wrapped up in 2012, working for about 60 hours per week. She was asked by the D.C. Commission for the Arts and Humanities and the restaurant owners of Mama Ayesha’s to complete the mural, which fills an entire side of the building.</p>
+                        <p>Thomas, the main subject of the mural, spent most of her career as a member of the White House press corps and interviewed 10 presidents, Rodas-Israel said. She said the restaurant owners valued Thomas&#8217; work as a journalist and wanted to showcase her among the presidents she worked with.</p>
+                        <figure class="post-thumbnail inline-figure">
+                            <img width="350" height="670" src="https://www.gwhatchet.com/wp-content/uploads/2019/11/ThePresidentialMural_MS-1000x667.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
+                            <p class="media-credit" style="margin-bottom: 0;">Media Credit: Maansi Srivastava</p>
+                        </figure>
+                        <p>“I wanted this to be a gift to the city and a gift to the people of Washington D.C. and to the country and the world,&#8221; she said.</p>
+                        <p>Rodas-Israel said she has ideas for new murals in the city, and she wants D.C. to be “like an open museum” with all of the murals. She said she was inspired by the famous Mexican muralist Diego Rivera&#8217;s concept that murals are public art and a whole city can be one big museum.</p>
+                        <p>“There are many, many places actually, I would like to say that I&#8217;m happy with the mural movement in D.C. with murals, big murals, popping up everywhere,” she said. “I feel very happy about that because that was the dream that I had with this mural. The idea that art and murals is public art, so everybody can see it.”</p>
+
+                    </div>
+                    <figcaption>
+                            <p class="media-description">Story by Anna Boone.</p>
+                     </figcaption>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+<div id="id05" class="w3-modal foo">
+    <div class="w3-modal-content">
+        <span class="close-button-div" onclick="dismissModal('id05')">Close Gallery</span>
+
+        <div class="w3-container">
+            <article class="post post-with-thumb">
+                <h1 class="post-title post-title-single">LOVE</h1>
+                <div class="post-body">
+                    <iframe width="100%" height="415" src="https://www.youtube.com/embed/F0TxkbH5e_k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <figcaption>
+                            <p class="media-description">Lisa Marie Thalhammer talks about the inspiration and work behind "LOVE" in Blagden Alley NW.</p>
+                     </figcaption>
+                    
+                    <div class="post-content">
+                        <p>Lisa Marie Thalhammer said D.C. “needed some love” after the 2016 presidential election – so she turned the thought into a mural.</p>
+                        <p>Thalhammer painted the “LOVE” mural in 2017, a multi-colored design that spells out the word on four garage doors in Blagden Alley at 926 N St. Rear NW. She said she wants the painting to draw in policy makers and politicians and remind them of the uplifting power of colors incorporated into the 13-color spectrum mural.</p>
+                        <p>“The piece also really has a message of equality and valuing diversity and valuing all the different aspects of humanity and of ourselves” Thalhammer said. “That&#8217;s why I&#8217;ve painted the piece.”</p>
+                        <p>The “LOVE” mural is a part of Thalhammer’s “love series,” a D.C.-based project launched in 2015 with a grant from the D.C. Commission on the Arts and Humanities. Throughout 2020, Thalhammer said she will embark on what she refers to as a &#8220;love campaign,&#8221; painting similar artwork across U.S. cities beginning in Hawaii <strong>WHAT CITY IN HAWAII?</strong>.</p>
+                        <p>“The plan is to spend a lot of time on the road just spreading the love and spreading the color, just being that reminder of what is the bigger picture for our country and for our humanity,” she said.</p>
+                        <figure class="post-thumbnail inline-figure">
+                            <img width="350" height="670" src="https://www.gwhatchet.com/wp-content/uploads/2019/11/LOVE_AW-1000x667.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
+                            <p class="media-credit" style="margin-bottom: 0;">Media Credit: Alexander Welling</p>
+                        </figure>
+                        <p>Thalhammer said she was recovering from a concussion at the time she began the series and was inspired by the way she healed through color therapy.</p>
+                        <p>“Learning about colors, learning about subtle energy and yoga and healing was really a big part of my creative process, and that&#8217;s when I first developed and created my ‘LOVE’ series,” she said.</p>
+                        <p>The colorful mural has gained attention on social media beyond the District, attracting visitors like <a href="https://www.washingtonpost.com/news/going-out-guide/wp/2018/09/05/where-to-find-all-those-d-c-murals-youve-seen-on-instagram/">Lady Gaga</a> and receiving online recognition and praise from <a href="https://www.facebook.com/photo.php?fbid=10156445999612119&amp;set=p.10156445999612119&amp;type=3&amp;theater">Chelsea Clinton</a> and <a href="https://www.facebook.com/photo.php?fbid=10212968911951469&amp;set=a.10205614087365451&amp;type=3&amp;theater">Mayor Muriel Bowser</a>.</p>
+                        <p>“It&#8217;s been amazing to see the ‘Instagram-ability’ of the work and how this tool of social media has naturally just spread the message of love and color to really the whole world,” she said.</p>
+                        <p>Her piece is one of several other murals that adorn the walls and garage doors throughout Blagden Alley, which she said is known as an &#8220;outdoor museum&#8221; among local artists. Visitors can find murals like Aniekan Udofia’s <a href="https://www.dcalleymuseum.com/project/space-is-the-place-2015">&#8220;Space is the Place&#8221;</a> and paintings of clowns and dogs along the alley.</p>
+                        <p>Thalhammer said she has been hanging around Blagden Alley for more than a decade with other artists, completing one other mural in the alley called “Meditation.” She said she wanted to enhance the alley by painting the modern garage doors that disrupted the “beautiful urban elements” like the brick in the historic alley.</p>
+                        <p>“The garage doors are kind of this modern eye-sore,” Thalhammer said. “We decided this alley would look so amazing if we could just turn these basic steal garage canvases into gorgeous, colorful works of art.”</p>
+
+                    </div>
+                    <figcaption>
+                            <p class="media-description">Story by Anna Boone.</p>
+                     </figcaption>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+<div id="id06" class="w3-modal foo">
+    <div class="w3-modal-content">
+        <span class="close-button-div" onclick="dismissModal('id06')">Close Gallery</span>
+
+        <div class="w3-container">
+            <article class="post post-with-thumb">
+                <h1 class="post-title post-title-single">Homeless Lives Matter</h1>
+                <div class="post-body">
+                    <iframe width="100%" height="415" src="https://www.youtube.com/embed/BZYT86dgMeI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <figcaption>
+                            <p class="media-description">Rose Jaffe talks about the inspiration and work behind "Homeless Lives Matter" at the intersection of 2nd Street NW and D Street NW.</p>
+                     </figcaption>
+                    
+                    <div class="post-content">
+                        <p>Located on the side of the largest homeless <a href="http://www.theccnv.org/about.htm">shelter</a> on the East Coast, the “Homeless Lives Matter” mural aims to draw attention to D.C.’s housing crisis.</p>
+                        <p>Nine colorful portraits of members and supporters of the Center for Creative Non Violence Homeless Shelter comprise the mural at the corner of 2nd and D streets. D.C.-native artist Rose Jaffe said she said painted the mural in 2016 because she wanted to honor the community of people who use the shelter and stray from painting portraits of famous and well-known figures.</p>
+                        <p>“I think that people can leverage the power that they have, and so art is the power that I have,” she said. “That’s the language and the tool that I can really communicate best with. So, that was something that I thought, &#8216;Why not create this mural that honors the folks that are inside?”</p>
+                        <p>The figures in the mural sit behind a blue-purple background featuring the U.S. Capitol and the Washington Monument.</p>
+                        <p>Below the nine portraits, a line of about 50 small silhouettes hold up signs with phrases like “Homeless lives matter,” “Housing is a human right,” “Support your community” and “Housing equity for all.” Jaffe said the protest scene is a “nod to Keith Haring,” an artist and activist.</p>
+                        <figure class="post-thumbnail inline-figure">
+                            <img width="350" height="670" src="https://www.gwhatchet.com/wp-content/uploads/2019/11/HomelessLivesMatter_JF-1000x667.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
+                            <p class="media-credit" style="margin-bottom: 0;">Media Credit: Jack Fonseca</p>
+                        </figure>
+                        <p>“D.C.’s housing crisis runs very deep, and I did that mural years ago at this point and nothing has changed,” Jaffe said. “In fact it’s just gotten worse.”</p>
+                        <p>D.C. tallied one of the highest homelessness <a href="https://www.forbes.com/sites/niallmccarthy/2018/12/20/the-u-s-cities-with-the-most-homeless-people-in-2018-infographic/#32d5cb3c1178">populations</a> of any city in the country in 2018 with about 6,900 people experiencing homelessness, according to Forbes.</p>
+                        <p>Commissioned to paint the mural by <a href="http://muralsdcproject.com/">MuralsDC</a>, Jaffe said the piece only took her about four days to paint. Jaffe has also completed more than 20 murals, including “Cup of Community” at 709 Kennedy St. and “DC Jazz Heroes” at 624 T St.</p>
+                        <p>Jaffe most recently <a href="https://www.washingtonpost.com/dc-md-va/2019/09/19/newest-mural-town-ruth-bader-ginsburg-is-larger-than-life-u-street/">completed</a> a mural of Supreme Court Justice Ruth Bader Ginsburg on 16th and U streets. She is currently working on completing four abstract murals at Maury Elementary School, at which each floor of the school includes a mural of a different biome, like the jungle and temperate forest.</p>
+                        <p>Jaffe said she comes from a family of artists and has made art her entire life. She also works in other mediums like linoleum block carving to make prints and ceramics. She said she has always loved art, and she worked hard to develop her skills through art school.</p>
+                        <p>“It’s almost like it&#8217;s had an exponential growth of love,” she said. “The more I did art, the more I felt like it was endless, like there was no end to exploring your growth within it.”</p>
+
+                    </div>
+                    <figcaption>
+                            <p class="media-description">Story by Jayde Lyon.</p>
+                     </figcaption>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+<div id="id07" class="w3-modal foo">
+    <div class="w3-modal-content">
+        <span class="close-button-div" onclick="dismissModal('id07')">Close Gallery</span>
+
+        <div class="w3-container">
+            <article class="post post-with-thumb">
+                <h1 class="post-title post-title-single">You Are Welcome</h1>
+                <div class="post-body">
+                    <iframe width="100%" height="415" src="https://www.youtube.com/embed/6c43ejIMBtY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <figcaption>
+                            <p class="media-description">Cita Sadeli talks about the inspiration and work behind "You Are Welcome" at 3020 14th Street NW.</p>
+                     </figcaption>
+                    
+                    <div class="post-content">
+                        <p>The walk-in clinic Unity Healthcare provides health care to everyone – those without insurance, people experiencing homelessness, incarcerated individuals and undocumented immigrants – and a mural on the clinic’s walls embodies that message.</p>
+                        <p>The mural “You Are Welcome,” located at 3020 14th St. NW, was designed and painted by muralist Cita Sadeli, who is also known as &#8220;MISS CHELOVE.&#8221; Sadeli said the piece depicts three “multicultural, multi-ethnic and multigenerational figures” – a grandmother, a young man and a child – adorned with flowers and leaves in front of a sunset.</p>
+                        <p>Sadeli said she was inspired to paint the mural after meeting with property owners at Unity Healthcare to research what kind of mural she would depict on the side of its building. She found that the practice has been around for 30 years, providing primary and specialized care to anyone who needs it even if they do not have health insurance or are not U.S. citizens, she said.</p>
+                        <p>“To me, that just spoke of so much love and caring and nurturing, and that&#8217;s the spirit that came into the mural,” Sadeli said.</p>
+                        <p>The grandmother in the mural wears a headscarf, which Sadeli said features the word “welcome” in five different languages – Spanish, Swahili, Vietnamese, English and Amharic – to reflect the languages spoken by most of Unity Healthcare’s patient population.</p>
+                        <p>The young African American man in the mural is a local Columbia Heights resident named David Bois, who is a musician and is actively involved with charity work. She said she once photographed Bois for a portrait and wanted to include him in the mural because he is a local community member.</p>
+                        <p>Sadeli said she hopes people who see the mural will take away a “feeling of hope” for those who are immigrating to the United States.</p>
+                        <p>“You know, in these times with all of the immigration issues and ICE literally raiding buses and folks around here, and a lot of folks around here being undocumented, I want people to remember that like we built this place – this is for everybody,” she said.</p>
+                        <figure class="post-thumbnail inline-figure">
+                            <img width="350" height="670" src="https://www.gwhatchet.com/wp-content/uploads/2019/11/YouAreWelcome_SM-1000x667.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
+                            <p class="media-credit" style="margin-bottom: 0;">Media Credit: Sophie Moten</p>
+                        </figure>
+                        <p>The mural was commissioned during the 2018 season of the MuralsDC program, a project funded by the D.C. Department of Public Works, in cooperation with the D.C. Commission on the Arts and Humanities. The project encourages artists to create long-lasting works that can replace areas covered in graffiti, according to its <a href="http://muralsdcproject.com/learn/murals-and-public-art-initiatives/">website</a>.</p>
+                        <p>Sadeli said the process took about three weeks to complete, finishing the project Sept. 20, 2018. She said the mural took longer than expected because rain showered the city while she was painting.</p>
+                        <p>“It was like monsoon season in D.C.,” Sadeli said. “But the process with this wall was to make a grid on the wall and then transfer the grid to the artwork, and then just recreate what&#8217;s in each grid block.”</p>
+                        <p>Sadeli said she first applied to MuralsDC in 2011, and “You Are Welcome” is the seventh mural she has completed for the program. She has also worked on murals like “<a href="http://muralsdcproject.com/mural/every-day-i-see-something-new/">Every Day I See Something New</a>,” “<a href="https://chelove.com/post/184885374814/all-my-hopes-dreams-20x30-exterior-mural">All My Hopes &amp; Dreams</a>” and “<a href="https://chelove.com/post/171497100044/4-cheers-for-chocolate-city-painted-in-winter-2017">4 Cheers for Chocolate City</a>.”</p>
+                        <p>In addition to murals, Sadeli said she has completed several pieces of art “based in graffiti,” including apparel, merchandise and design work.</p>
+                        <p>“Just anything and everything I can get my hands on,” she said. “Muralists are being invited to paint boats and airplanes and interiors, and it&#8217;s just like it&#8217;s really open in terms of the opportunities.”</p>
+                    </div>
+                    <figcaption>
+                            <p class="media-description">Story by Rachel Armany.</p>
+                     </figcaption>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+<div id="id08" class="w3-modal foo">
+    <div class="w3-modal-content">
+        <span class="close-button-div" onclick="dismissModal('id08')">Close Gallery</span>
+
+        <div class="w3-container">
+            <article class="post post-with-thumb">
+                <h1 class="post-title post-title-single">CentroNía</h1>
+                <div class="post-body">
+                    <iframe width="100%" height="415" src="https://www.youtube.com/embed/WSE3bvkZkU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <figcaption>
+                            <p class="media-description">Ryan McDonnell talks about the inspiration and work behind "CentroNía" at 1420 Columbia Road NW.</p>
+                     </figcaption>
+                    
+                    <div class="post-content">
+                        <p>Artist and instructional lab associate for the University’s ceramics studio Ryan McDonnell teamed up with about 10 high school students to complete a mural that lines the alley of CentroNía elementary school.</p>
+                        <p>McDonnell and the students completed this colorful mural at 1420 Columbia Road in the summer of 2008 during a summer course McDonnell taught for high school students. McDonnell said he wanted to create the mural for both the learning experience for the students and to brighten the community.</p>
+                        <p>McDonnell worked at CentroNía at the time as a <strong>XXXX</strong>. He was asked by the D.C. Commission and the Midnight Forum – a free after school program that empowers youth through hip-hop and art that sponsored the mural – to run the summer course that revolved around stenciling, graffiti and the making of the mural.</p>
+                        <p>The mural consists of nine paintings of Olmec colossal heads –large stone sculptures of human heads from ancient Mesoamerica – in all colors of the rainbow. McDonnell said the students made stencils of the Olmec heads which they painted in the middle of a sun with rays coming out. Each student’s name who worked on the mural is painted in large graffiti bubble letter underneath the sun.</p>
+                        <p>CentroNía elementary school is a bilingual charter school, offering programs in Enlgish and Spanish.</p>
+                        <p>“It represented the individual student, it represented the school itself and had that cultural component,” McDonnell said. “It did the two major things we talked about which were stencils and graffiti and the actual bubble letters.”</p>
+                        <p>McDonnell said that part of the purpose for creating the mural in the alley of CentroNía was to brighten up the spot.</p>
+                        <p>“It’s at an elementary school, it’s really about a nice brightness in that particular community,” he said. “The alley itself is really more of an alley, and not necessarily billboard material in a very bright, open spot, so it’s a nice happy little alcove of the city.”</p>
+                        <figure class="post-thumbnail inline-figure">
+                            <img width="350" height="670" src="https://www.gwhatchet.com/wp-content/uploads/2019/11/CentroNia_SG-1000x667.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
+                            <p class="media-credit" style="margin-bottom: 0;">Media Credit: Sabrina Godin</p>
+                        </figure>
+                        <p>McDonnell said he still keeps in contact with some of the students who worked on the mural 11 years ago. He said he has run into them multiple times over the years and four of the students went on to pursue professions in art.</p>
+                        <p>“To be in contact and know that they’re still making beautiful artwork, that was really the point,” McDonnell said.</p>
+                        <p>He added that with those four students, he saw the positive “repercussions of just a summer program” that helped nurture their passion for art.</p>
+                        <p>“It seems like if DC Commission was investing and Midnight Forum was investing $6,000-$8,000 into the mural, and if they were actually be able to see the repercussions of that now, 10 to 11 years later, they would know that they got a lot for the money that they put in,” McDonnell said.</p>
+                        <p>Mainly a ceramicist, McDonnell said the mural at CentroNía is the only mural he has done. He currently runs the ceramics studio at the University and at the Corcoran in addition to teaching classes at Montgomery College. He has also worked in stone carving, updating the gargoyles on the National Cathedral.</p>
+                    </div>
+                    <figcaption>
+                            <p class="media-description">Story by Rachel Armany.</p>
+                     </figcaption>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+<div id="id09" class="w3-modal foo">
+    <div class="w3-modal-content">
+        <span class="close-button-div" onclick="dismissModal('id09')">Close Gallery</span>
+
+        <div class="w3-container">
+            <article class="post post-with-thumb">
+                <h1 class="post-title post-title-single">Language Access for All</h1>
+                <div class="post-body">
+                    <iframe width="100%" height="415" src="https://www.youtube.com/embed/rxL9UZAZizU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <figcaption>
+                            <p class="media-description">Juan Pineda talks about the inspiration and work behind "Language Access for All in DC" at 4301 13th Street NW.</p>
+                     </figcaption>
+                    
+                     <div class="post-content">
+                        <p>At MacFarland Middle School, artist Juan Pablo Pineda wants every student to know that language barriers should not divide the school community.</p>
+                        <p>So, Pineda painted the “Language Access for All” mural on the side of the school at 4301 13th St. NW with some help from youth in the area. The mural spells out the words “language access” in a dozen different languages, including Ethiopian, Japanese, Chinese, Spanish and Hindi.</p>
+                        <p>Pineda, who goes by the artist name “<a href="http://criomaticdesigns.com/">Criomatic</a>,” said high-school aged youth in the area who represented the Office of Latino Affairs, which funded the project, helped paint the lower half of the mural. Pineda said he completed the upper layer of the mural by himself using a scaffold, spending abut two to three weeks to complete the project.</p>
+                        <p>“Any time children are involved and the community is involved, it&#8217;s super fun and super exciting,” he said. “Out of that group of kids, at least one or two will be inspired and will want to continue that cycle, and that’s what really matters.”</p>
+                        <p>Pineda said he wanted all ethnicities to be represented equally in the school community regardless of language barriers. The mural is intended to &#8220;enhance the community&#8221; and inspire others to accept those from different backgrounds in the community, he said.</p>
+                        <p>“Together we&#8217;re all one community no matter where we’re from, what language we speak or what color we look,” he said.</p>
+                        <p>The Maryland native said he painted the mural in 2012 as part of the <a href="http://muralsdcproject.com/">MuralsDC</a> project, created in 2007 to encourage arts to replace graffiti in the city with &#8220;artistic works&#8221; and teach young aspiring artists about the process of creating a mural. Pineda said the DC Office on Latino Affairs wanted an artist who represented the organization to create the mural.</p>
+                        <figure class="post-thumbnail inline-figure">
+                            <img width="350" height="670" src="https://www.gwhatchet.com/wp-content/uploads/2019/11/LanguageAccessForAll_JF-1000x667.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
+                            <p class="media-credit" style="margin-bottom: 0;">Media Credit: Jack Fonseca</p>
+                        </figure>
+                        <p>“They wanted a Latino artist to represent them and to put together the concept and work with them,” he said. “The color design was my idea, it was my concept. But they had the final say in what ethnicities they wanted to represent.”</p>
+                        <p>Since the mural was first created, he said its colors have <a href="http://muralsdcproject.com/mural/language-access-for-all-in-dc/">faded</a> – which is common for most outdoor art pieces.</p>
+                        <p>“Exterior murals have a tendency of fading after a period of time,” he said. “A lot of times people, they think they are forever, and they’re not. I mean they&#8217;re exposed to the sun elements and weather conditions, and there&#8217;s no real protection from water.”</p>
+                        <p>As an artist, Pineda has worked on other historical murals in the District. He said he had the “privilege” of restoring an Adams Morgan <a href="http://www.welovedc.com/2011/07/21/a-true-adams-morgan-original/">mural</a> originally painted by two Chilean immigrants in 1977 titled “A People without Murals is a Demuralized People.”</p>
+                        <p>“It just became this iconic depiction of the immigration movement in the late 70’s, early 80’s in Washington D.C.,” he said.</p>
+                        <p>Pineda said he was inspired to pursue mural art after spending time in the Los Angeles area as a child gaining appreciation for artists who could design large murals around the city.</p>
+                        <p>Pineda also works on art consultations, graphic design work and privately commissioned mural works. He can always be found experimenting with new mediums, most recently with ceramics and charcoal drawings, he said.</p>
+                        <p>“I love to mix it up,” he said. “Mediums are always a thrill to look for that challenge.”</p>
+                    </div>
+                    <figcaption>
+                            <p class="media-description">Story by Rachel Armany.</p>
+                     </figcaption>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+<body onresize="resizeMap()" id="body-element" class="post-template-default single single-post postid-1103487 single-format-standard logged-in admin-bar no-customize-support">
     <nav class="primary-nav">
         <i class="fa fa-bars menu-button"></i>
         <div class="menu-sections-container">
@@ -574,61 +918,56 @@ Click the help icon above to learn more.
 
     <div class="primary-container">
         <header class="single-header">
-            <h1 class="post-title post-title-single">Thousands use GW Libraries&#8217; social media archive tool six years after debut</h1>
+            <h1 class="post-title post-title-single">Murals of Northwest D.C.</h1>
         </header>
         <section class="main-content main-content-single">
             <article class="post post-with-thumb">
                 <div class="post-body">
-                    <figure class="post-thumbnail"><img width="1000" height="670" src="https://www.gwhatchet.com/wp-content/uploads/2019/11/FileAB_Geneva-Henry-1000x670.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://www.gwhatchet.com/wp-content/uploads/2019/11/FileAB_Geneva-Henry-1000x670.jpg 1000w, https://www.gwhatchet.com/wp-content/uploads/2019/11/FileAB_Geneva-Henry-300x200.jpg 300w, https://www.gwhatchet.com/wp-content/uploads/2019/11/FileAB_Geneva-Henry-500x334.jpg 500w, https://www.gwhatchet.com/wp-content/uploads/2019/11/FileAB_Geneva-Henry-2000x1340.jpg 2000w" sizes="(max-width: 1000px) 100vw, 1000px" />
-                        <figcaption>
-                            <p class="media-credit">Media Credit: Hatchet File Photo </p>
-                            <p class="media-description">Geneva Henry, the dean of libraries and academic innovation, said more than 3,000 users have employed different search strategies to pore over more than 15 million tweets. </p>
-                        </figcaption>
+                    <figure class="post-thumbnail" style="margin-left: 0;"><img width="1000" height="670" src="https://www.gwhatchet.com/wp-content/uploads/2019/11/Cover-Photo-Mural-Collage-1000x670.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://www.gwhatchet.com/wp-content/uploads/2019/11/Cover-Photo-Mural-Collage-1000x670.jpg 1000w, https://www.gwhatchet.com/wp-content/uploads/2019/11/Cover-Photo-Mural-Collage-300x200.jpg 300w, https://www.gwhatchet.com/wp-content/uploads/2019/11/Cover-Photo-Mural-Collage-500x334.jpg 500w, https://www.gwhatchet.com/wp-content/uploads/2019/11/Cover-Photo-Mural-Collage-2000x1340.jpg 2000w" sizes="(max-width: 1000px) 100vw, 1000px" />
+                        
                     </figure>
                     <div class="byline">
                         <div class="category-badge">
-                            <a href="https://www.gwhatchet.com/section/news/" style="background-color: #0070cc">News</a>
+                            <a href="https://www.gwhatchet.com/section/news/" style="background-color: #0070cc">Culture</a>
                         </div>
-                        <span class="byline-author">By <a href="https://www.gwhatchet.com/author/zeniya-cooley/" rel="author">Zeniya Cooley</a></span>
-                        <span class="byline-time">Nov 7, 2019 12:43 AM</span>
+                        <span class="byline-author">By 
+                        <a href="https://www.gwhatchet.com/author/sidney-lee/" rel="author">Sidney Lee</a>, 
+                        <a href="https://www.gwhatchet.com/author/rachel-armany/" rel="author">Rachel Armany</a>, 
+                        <a href="https://www.gwhatchet.com/author/anna-boone/" rel="author">Anna Boone</a>, 
+                        <a href="https://www.gwhatchet.com/author/jayde-lyon/" rel="author">Jayde Lyon</a>, 
+                        <a href="https://www.gwhatchet.com/section/video/" rel="author">The Hatchet Video Team</a>
+
+
+
+                        
+
+                        </span>
+                        <span class="byline-time">Nov 11, 2019 12:43 AM</span>
                     </div>
                     <div class="post-content">
-                        <p>More than 3,000 users have taken advantage of a tool GW Libraries officials created to help researchers archive and analyze social media posts over the past six years.</p>
-                        <p>Developed in 2013 by a group of software developers, archivists and librarians, the Social Feed Manager collects data from Twitter, Tumblr, Flickr and Sina Weibo – a Chinese blogging website – and exports and organizes the data for researcher use. The tool has helped researchers obtain hundreds of thousands of social media posts they can use to study, according to the Social Feed Manager website.</p>
-                        <p>Geneva Henry, the dean of libraries and academic innovation, said users can query the archived posts by characteristics like account and keyword. Library officials <a href="https://www.gwhatchet.com/2014/11/06/librarians-look-to-store-social-media-data-for-future-research/">received</a> a $130,000 grant from the National Historical Publications and Records Commission in 2014 to expand the tool&#8217;s functionality from Twitter alone to several websites.</p>
-                        <p>“GW Libraries and Academic Innovation developed and maintains this software project as part of our commitment to preserving the human record,” Henry said in an email.</p>
-                        <p>Since the tool&#8217;s inception, more than 300 members of the GW community have gathered more than 1 million tweets through the tool, according to Social Feed Manager’s <a href="https://tweetsets.library.gwu.edu/stats">website</a>. More than 2,600 total researchers have analyzed 15 million tweets in the same time, the website states.</p>
-                        <p>The 2014 grant funded the project through 2017, according to the feed manager&#8217;s website. Henry said the project is now financially supported by the Laura Bush 21st Century Librarian Program.</p>
-                        <p>Library staff have updated the tool several times since its creation, including a new feature added last month to allow researchers to locate tweets by searching on the database by a specific language, the website states.</p>
-                        <p>Henry said members of GW Libraries’ “scholarly technology team” have taught staff at other academic institutions, like Virginia Tech and Stanford University, how to use the Social Feed Manager for research.</p>
-                        <p>She added that staff members work with researchers to find posts for individual projects and pursue posts on topics of “strong interest,” like the 2016 and 2020 presidential elections. The tool includes an archive of 283 million tweets related to the 2016 presidential election and 88 million tweets so far related to the 2020 presidential election, Henry said.</p>
-                        <p>“Researchers throughout GW, the country and the world rely on SFM to support their research using social media as data,” she said.</p>
-                        <p>She said library staff have also <a href="https://gwu-libraries.github.io/sfm-ui/resources/social_media_research_ethical_and_privacy_guidelines.pdf">developed</a> ethical and privacy guidelines to inform researchers on their projects.</p>
-                        <p>Researchers have used the Social Feed Manager to <a href="https://gwu.app.box.com/s/snyeep1974aht8dbybu9qjgj5ueq0i16">gather</a> data on projects examining how elite voices shape politics and how social media influences politics in Iran in the past year.</p>
-                        <p>Henry declined to say what feedback officials have heard about the tool.</p>
-                        <p>Research experts said the tool is a way to provide researchers and historians access to data cataloging millions of reactions and opinions.</p>
-                        <p>Panagiotis Takis Metaxas, a professor of computer science at Wellesley College, said collecting social media data is helpful in identifying fake accounts and studying the dissemination of misinformation, which researchers can especially use ahead of the 2020 presidential election.</p>
-                        <p>He said an early example of political disinformation used online was the 2010 Massachusetts special election for a vacant U.S. Senate seat after the death of Sen. Ted Kennedy, D-Mass., adding that social media data helped him discover what led to the surprise victory of a Republican candidate in a liberal state.</p>
-                        <p>“Because we happened to be collecting social media data, we could find some partial answer about how this might have happened, and we discovered that there were groups of people who were launching automatic social media bots, trying to propagate lies,” Metaxas said.</p>
+                        <p>Murals aren't hard to come by in D.C.</p>
 
-                        <h3 style="font-weight: 500; font-size: 24pt; width: 100%; background-color: #003b5c; padding-top: 16px; padding-bottom: 16px; padding-left: 32px; padding-right: padding-right: 32; color: white; margin-bottom: 0;">Interactive Murals Map</h3>
+                        <p>Dozens of murals cover sides of buildings, brighten up alleys and adorn houses. But when you stop by a mural for a photo opportunity, you may not know the story and meaning behind the art.</p>
+
+                        <p>The Hatchet met up with nine artists to talk about their work, the process of creating a mural and the inspiration behind the pieces. The murals illustrate wide-ranging issues like homelessness in D.C. and health equity for immigrants and incarcerated individuals.</p>
+
+                        <p>Eight of the nine murals were commissioned by the DC Commission on the Arts and  Humanities’ MuralsDC project, initiated in 2007 in an effort to abate the prevalence of graffiti around D.C.</p>
+
+                        <p>Local artists and artists from around the country have come to the District to take part in the project, painting murals that range from a woman depicted in a meditation pose to a famous White House reporter.</p>
+
+                        <p>Click on the interactive map below to learn more about the murals and hear from the artists.</p>
+                     
+                        <div class="map-header">
+                            <h3>Murals of Northwest D.C.: Interactive Map</h3>
+                            <p>Click the murals to explore DC.</p>
+                        </div>
+                        
                         <div id="map" class="mapBox" style="z-index: 1;"></div>
 
 
 
-                        <p>Metaxas said GW Libraries should present visualizations alongside the information it collects so the data are easily digestible for readers.</p>
-                        <p>“You will see that we have developed already, visualizations that will give people an understanding of what was the dialogue,” Metaxas said. “Sometimes a visualization could be useful for the use of the data that the library is collecting.”</p>
-                        <p>Zachary Brodt, an archivist at the University of Pittsburgh, said researchers can use the data to analyze the development of political and social movements and reactions to those movements.</p>
-                        <p>“Archiving the use of specific hashtags can show us the origin of an idea or movement, track its dissemination throughout a social media platform and allow us to better understand how that movement was received,” Brodt said in an email.</p>
-                        <p>He said time will further validate social media’s value in research because significant social movements like Black Lives Matter and #MeToo arose from social media platforms.</p>
-                        <p>“When websites started to become a source of information for historical research, I think they were looked at skeptically at first, but now it is not uncommon to pick up a book and find websites cited in footnotes or bibliographies,” he said. “I think the same will hold true for social media archives.”</p>
                     </div>
                 </div>
-
-
-            
-
-
 
             </article>
             <ul class="share-links">
@@ -694,36 +1033,34 @@ Click the help icon above to learn more.
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/MilkenFilePhoto-2000x1340.jpg');
             transition: .5s ease;
         }
-
         .lillyC {
-            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/MilkenFilePhoto-2000x1340.jpg');
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/CallaLily_SG-300x200.jpg');
         }
         .namaste {
-            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/SY_georgetown-safeway-1500x1000.jpg');
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/Namaste_AB-300x200.jpg');
         }
         .watermelonHouse {
-            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/SY_georgetown-safeway-1500x1000.jpg');
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/Watermelon_SW-300x200.jpg');
         }
         .Presidential {
-            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/ThePresidentialMural_MS-1500x1000.jpg');
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/ThePresidentialMural_MS-300x200.jpg');
         }
         .Love {
-            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/MilkenFilePhoto-2000x1340.jpg');
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/LOVE_AW-300x200.jpg');
         }
         .Homeless {
-            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/HomelessLivesMatter_JF-2000x1340.jpg');
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/HomelessLivesMatter_JF-300x200.jpg');
         }
         .Immigration {
-            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/YouAreWelcome_SM2000x1340.jpg');
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/YouAreWelcome_SM-300x200.jpg');
         }
         .centrolNai {
-            background-image: url('');
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/CentroNia_SG-300x200.jpg');
         }
         .Language {
-            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/LanguageAccessForAll_JF-2000x1340.jpg');
+            background-image: url('https://www.gwhatchet.com/wp-content/uploads/2019/11/LanguageAccessForAll_JF-300x200.jpg');
         }
         .marker-pin:hover {
             width: 90px;
@@ -735,15 +1072,49 @@ Click the help icon above to learn more.
             font-weight: 700;
         }
 
+
+
         @media only screen and (max-width: 600px) {
             .marker-pin {
-            width: 40px;
-            height: 40px;
+                width: 40px;
+                height: 40px;
+            }
+
+            .marker-pin:hover {
+                width: 40px;
+                height: 40px;
+            }
         }
+
+        .foo {                            
+            display: none;                    
+            opacity: 0;                       
+            transition: opacity 300ms;      
         }
-    </style>>
+
+        .foo.fade-in {
+            display: block;
+            opacity: 1;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .fade-in {
+          opacity: 1;
+        }
+
+        .fade-out {
+          opacity: 0;
+        }
+    </style>
     <footer>
         <script>
+
+            function resizeMap() {
+
+            }
 
             function setMap() {
                 var map = L.map('map', { zoomControl: false, dragging: false, doubleClickZoom: false, trackResize: false }).setView([38.920992, -77.024128], 13);
@@ -775,7 +1146,7 @@ Click the help icon above to learn more.
                     iconAnchor: [15, 42]
                 });
                 mural2_namaste =  L.marker([38.907304, -77.007550], { icon: icon2 }).addTo(map)
-                .on('click', onMapClick);
+                .on('click', function() { onMapClick('id02');});
                 
                 // Third marker
                 icon3 = L.divIcon({
@@ -785,7 +1156,7 @@ Click the help icon above to learn more.
                     iconAnchor: [15, 42]
                 });
                 mural3_watermelonHouse = L.marker ([38.911046, -77.027515], {icon: icon3}).addTo(map)
-                .on('click', onMapClick);
+                .on('click', function() { onMapClick('id03');});
 
                 // Forth marker
                 icon4 = L.divIcon({
@@ -795,7 +1166,7 @@ Click the help icon above to learn more.
                     iconAnchor: [15, 42]
                 });
                 mural4_Presidential = L.marker ([38.923547, -77.046777], {icon: icon4}).addTo(map)
-                .on('click', onMapClick);
+                .on('click', function() { onMapClick('id04');});
 
                 // Fifth marker 
                 icon5 = L.divIcon({
@@ -805,7 +1176,7 @@ Click the help icon above to learn more.
                     iconAnchor: [15, 42]
                 });
                 mural5_Love = L.marker ([38.904637, -77.036462], {icon: icon5}).addTo(map)
-                .on('click', onMapClick);
+                .on('click', function() { onMapClick('id05');});
 
                 // Sixth marker
                 icon6 = L.divIcon({
@@ -815,7 +1186,7 @@ Click the help icon above to learn more.
                     iconAnchor: [15, 42]
                 });
                 mural6_Homeless = L.marker ([38.894845, -77.013641], {icon: icon6}).addTo(map)
-                .on('click', onMapClick);
+                .on('click', function() { onMapClick('id06');});
 
                 // Seventh marker
                 icon7 = L.divIcon({
@@ -825,7 +1196,7 @@ Click the help icon above to learn more.
                     iconAnchor: [15, 42]
                 });
                 mural7_Immigration = L.marker ([38.924625, -77.015234], {icon: icon7}).addTo(map)
-                .on('click', onMapClick);
+                .on('click', function() { onMapClick('id07');});
 
                 // Eighth marker 
                 icon8 = L.divIcon({
@@ -835,7 +1206,7 @@ Click the help icon above to learn more.
                     iconAnchor: [15, 42]
                 });
                 mural8_centrolNai = L.marker ([38.920228, -77.032583], {icon: icon8}).addTo(map)
-                .on('click', onMapClick);
+                .on('click', function() { onMapClick('id08');});
 
                 // Ninth marker 
                 icon9 = L.divIcon({
@@ -845,7 +1216,7 @@ Click the help icon above to learn more.
                     iconAnchor: [15, 42]
                 });
                 mural9_Language = L.marker ([38.942354, -77.028819], {icon: icon9}).addTo(map)
-                .on('click', onMapClick);
+                .on('click', function() { onMapClick('id09');});
 
                 var group = new L.featureGroup([
                     mural1_lillyC, 
@@ -859,20 +1230,34 @@ Click the help icon above to learn more.
                     mural9_Language,
                 ]);
 
-                map.fitBounds(group.getBounds(), { "padding": [1, 1] });
+                map.fitBounds(group.getBounds());
 
             }
 
             function dismissModal(id) {
-                
-                document.getElementById(id).style.display = 'none'
-
-
                 document.getElementById('body-element').style.overflow = 'auto';
+                
+                var $foo = $('#' + id);
+
+                $foo.removeClass('fade-in');
+
+                var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+                $foo.addClass('fade-out').one(transitionEnd, function() {
+                    $foo.removeClass('block').outerWidth();
+                    $foo.removeClass('fade-out');
+                });
+               
+
             }
             
             function onMapClick(id) {
-                document.getElementById(id).style.display = 'block'
+                //document.getElementById(id).style.display = 'block'
+                var $foo = $('#' + id);
+
+                $foo.addClass('block').outerWidth();
+                $foo.removeClass('fade-out');
+                $foo.addClass('fade-in');
         
                 document.getElementById('body-element').style.overflow = 'hidden';
 
